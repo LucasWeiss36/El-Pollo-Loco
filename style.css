@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Amatic SC Bold";
+  src: url("assets/fonts/AmaticSC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amatic SC Regular";
+  src: url("assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0 0 100px 0;
+  padding: 0 24px;
+  border: 5px dotted black;
+}
+
+h2 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.contollContainer span {
+  font-size: 50px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("assets/img/HTMLBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Amatic SC Bold";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controlls {
+  display: flex;
+  gap: 10vw;
+}
+
+.contollContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+canvas {
+  background-color: black;
+}
+
+.startScreen {
+  width: 720px;
+  height: auto;
+  position: relative;
+}
+
+.startScreen-img {
+  width: 100%;
+  height: auto;
+  border-width: 100px;
+  
+}
+
+.border{
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+  border-radius: 8px;
+}
+
+.btns{
+  border-radius: 12px;
+  border: none;
+  background: rgb(255, 170, 0);
+  padding: 0 20px;
+  cursor: pointer;
+  font-family: 'Amatic SC Bold';
+  font-size: 82px;
+}
+
+.btn-container{
+  display: flex;
+  gap: 200px;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.btn-container-start{
+  display: flex;
+  gap: 200px;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+.restart{
+  font-size: 72px;
+  z-index: 1;
+  display: none;
+}
+
+#orientation-warning {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.selector {
+  -user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.mobile-movement div{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.mobile-movement{
+  display: flex;
+  gap: 40px;
+}
+
+.mobile-movement-container{
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  position: absolute;
+  bottom: 20%;
+  font-size: 28px;
+}
+
+#impressum{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#impressum p{
+  font-size: 25px;
+  margin: 0;
+}
+
+.back-btn{
+  border-radius: 5px;
+  border: none;
+  background: rgb(255, 170, 0);
+  padding: 0 8px;
+  cursor: pointer;
+  font-family: 'Amatic SC Bold';
+  font-size: 30px;
+}
+
+#mute{
+  z-index: 1;
+  position: absolute;
+  bottom: 20%;
+  border:2px solid black;
+}
+
+
+@media (orientation: portrait) {
+  #orientation-warning {
+    display: flex;
+  }
+
+  main, section{
+    display: none;
+  }
+
+  
+}
+@media only screen and (max-height: 1024px) {
+
+  .mobile-movement-container{
+    position: absolute;
+    bottom: 18%;
+  }
+
+  #mute{
+    position: absolute;
+    bottom: 5%;
+  }
+}
+
+
+@media only screen and (max-height: 820px) {
+
+
+  .mobile-movement-container{
+    position: absolute;
+    bottom: 2%;
+  }
+
+  #mute{
+    position: absolute;
+    bottom: 2%;
+  }
+
+  canvas {
+    height: 357px;
+    width: 652px;
+  }
+  .startScreen{
+    width: 652px;
+  }
+
+  .start-button{
+    font-size: 50px;
+  }
+
+  section, h1 {
+    display: none;
+  }
+}
